@@ -1,7 +1,4 @@
 <?php
-
-
-
   include('connect.php');
   if(isset($_POST['loginsubmit'])){
       $email = $_POST['email'];
@@ -36,7 +33,7 @@
                     $_SESSION['login']=1;
                     $_SESSION['user_id']= $data['user_id'];
 
-                    header('Location:../home.php');
+                    header('Location:../rooms.php');
                 }else{
                     header('Location:../login.php?errmsg=email and password does not match');
                 }
@@ -58,8 +55,6 @@
             }
             } 
         // $data = mysqli_fetch_assoc($result);
-     
-     
         
     }
     else {
